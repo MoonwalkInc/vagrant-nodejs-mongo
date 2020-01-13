@@ -27,7 +27,7 @@ The `/vagrant` folder in the virtual machine is synchronized with the folder tha
 
 To run the sample project, do the following while logged into the virtual machine:
 
-- `cd /vagrant/src`
+- `cd /src`
 - `npm install`
 - `npm start`
 
