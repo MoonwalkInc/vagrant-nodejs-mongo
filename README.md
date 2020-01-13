@@ -1,22 +1,21 @@
-# vagrant-nodejs-mongo
+# moonwalk - vagrant/nodejs/mongodb
+
+**Description**: This is used for local development. The version of MongoDB is compatible with the latest version used in AWS DocumentDB.
 
 This Vagrant machine contains:
 
 - Ubuntu 18.04
 - Node.js 10.15.3
-- MongoDB 4.0.9
+- MongoDB 3.6 (Same version used in AWS DocumentDB)
 
 ## How to use
-
-> **Note**
->
-> I have only tested this virtual machine using Windows 10 as host
 
 - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)
 - Open up a terminal (if you are on Windows, do it **as administrator**)
 - Clone this repository
 - Run `vagrant up` in the folder that holds this repository
 - Wait for the virtual machine to download and start
+- You may get prompted to enter your computers password mainly if your not an admin
 - Log in to the machine running `vagrant ssh`
 - To exit the machine just run `exit`
 - To shut down the machine run `vagrant halt`
