@@ -23,15 +23,18 @@ sudo apt-get install -y mongodb-org
 
 chown -R vagrant:vagrant /home/vagrant/
 
-# Start and enable the Mongo service so that it automatically starts every time you start the machine
-sudo systemctl enable mongod
-sudo systemctl start mongod
-sudo systemctl status mongod
-
 ln -sf /vagrant/vagrant-config/systemd-scripts/moonwalk_api.service /etc/systemd/system/moonwalk_api.service
 sudo systemctl daemon-reload
 sudo systemctl enable moonwalk_api.service
 sudo systemctl start moonwalk_api.service
 
+# Start and enable the Mongo service so that it automatically starts every time you start the machine
+sudo systemctl enable mongod
+sudo systemctl start mongod
+# sudo systemctl status mongod
+
 #start nginx service
 sudo service nginx restart
+
+# Start importing seed data into MongoDB
+mongorestore -d moonwalk-dashboard-local /vagrant/vagrant-config/mongo-config/seed-data

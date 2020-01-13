@@ -14,5 +14,6 @@ sudo service mongod restart
 sudo systemctl status nginx.service
 sudo systemctl status mongod
 
+sudo systemctl enable moonwalk_api.service
 sudo systemctl stop moonwalk_api.service
 sudo systemctl start moonwalk_api.service

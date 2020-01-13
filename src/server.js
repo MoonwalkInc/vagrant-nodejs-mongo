@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-mongoose.connect('mongodb://127.0.0.1/myapp', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1/moonwalk-dashboard-local', { useNewUrlParser: true });
 
 mongoose.connection.on('connected', () => {
   console.log('Database connected');
@@ -17,7 +17,7 @@ mongoose.connection.on('error', error => {
 app.get('/', (req, res) => {
   var data = '<p>Hello Vagrant!</p>';
   if (mongoose.connection.readyState) {
-    data += '<p>Connected to MongoDB</p>';
+    data += '<p>Connected to MongoDB. Now get to work!<!/p>';
   } else {
     data += '<p>Not connected to MongoDB :(</p>';
   }
