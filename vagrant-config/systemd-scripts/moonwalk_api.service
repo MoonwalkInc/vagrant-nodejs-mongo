@@ -1,0 +1,12 @@
+[Unit]
+Description=Moonwalk API
+After=network.target
+
+[Service]
+User=vagrant
+Environment=NODE_ENV=localhost
+WorkingDirectory=/vagrant/src
+ExecStart=/usr/bin/node server.js
+
+[Install]
+WantedBy=multi-user.target
